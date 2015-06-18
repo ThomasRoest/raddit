@@ -1,0 +1,14 @@
+.form-container {
+  max-width: 500px;
+  margin: 0 auto 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  // text-align: center;
+  padding: 1em;
+  .btn {
+    margin: 2em 0 2em 0;
+  }
+  input {
+    margin: 10px 0 10px 0;
+  }
+}

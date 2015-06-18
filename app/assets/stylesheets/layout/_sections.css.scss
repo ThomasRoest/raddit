@@ -1,0 +1,24 @@
+.l-linkitem-feed {
+  border: 1px solid #ccc;
+  padding: 1em;
+  margin-top: 10px;
+  border-radius: 3px;
+  h2 {
+    margin: 0;
+    text-decoration: underline;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+.l-linkitem-show {
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.l-comment-feed {
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 3px; 
+}

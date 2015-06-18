@@ -1,0 +1,31 @@
+<div class="l-container-default">
+
+  <% LinkCategory.all.each do |c| %>
+    <%= link_to c.name, links_path(link_category: c.name), class: 'btn btn-small btn-transparent' %>
+  <% end %>
+
+
+
+<% @links.each do |link| %>
+  <div class="l-linkitem-feed">
+
+   <h2><%= link_to link.title, link %></h2>
+    <p class='timestamp'>Sumitted <%= time_ago_in_words(link.created_at) %> by <%= link.user.name %></p>
+
+    <a href="<%= link.url %>" class="btn btn-small btn-primary">Visit Link</a>
+    <%= link_to like_link_path(link), class: 'btn btn-small btn-transparent-blue', method: :put do %>
+    Upvote
+      <%= link.get_upvotes.size %>
+      <span><%= icon('chevron-up') %></span>
+    <% end %>
+      <%= link_to dislike_link_path(link), class: 'btn btn-small btn-transparent-blue', method: :put do %>
+    <span>
+      Downvote
+          <%= link.get_downvotes.size %>
+          <span><%= icon('chevron-down') %></span>
+
+    <% end %>
+  </div>
+<% end %>
+</div>
+
